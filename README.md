@@ -1,4 +1,4 @@
-# Marlin 3D Printer Firmware for Monoprice Delta Mini
+# Marlin 3D Printer Firmware for Monoprice Delta Mini test
 
 A fork of Marlin firmware (2.5.2) for the Monoprice MP Mini Delta 3d printer
 
