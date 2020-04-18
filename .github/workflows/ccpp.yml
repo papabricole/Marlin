@@ -21,20 +21,14 @@ jobs:
         pio_path=$(platformio lib --global list | grep Library | sed 's/Library Storage:\(.*\)lib/\1/')
         cd $pio_path
         #find $pio_path/packages/framework-arduinoststm32
-        git init
-        git remote add -f origin https://github.com/papabricole/Arduino_Core_STM32.git
-        git reset --hard origin/malyan-m300
+        #git init
+        #git remote add -f origin https://github.com/papabricole/Arduino_Core_STM32.git
+        #git reset --hard origin/malyan-m300
     - name: Build Marlin
       run: |
-        platformio run -e malyan_M300
+        platformio run -e malyan_M300 -v
         mkdir firmware && touch firmware/fcupdate.flg
         mv .pio/build/malyan_M300/firmware.bin firmware/firmware.bin
-    - name: show infos
-      run: |
-        pio_path=$(platformio lib --global list | grep Library | sed 's/Library Storage:\(.*\)lib/\1/')
-        cd $pio_path
-        git remote -v
-        git describe
     - uses: actions/upload-artifact@v1
       with:
         name: firmware
