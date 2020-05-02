@@ -301,6 +301,7 @@
 #define BOARD_MKS_ROBIN_E3D           4024  // MKS Robin E3D(STM32F103RCT6)
 #define BOARD_MKS_ROBIN_E3            4025  // MKS Robin E3(STM32F103RCT6)
 #define BOARD_MALYAN_M300             4026  // STM32F070-based delta
+#define BOARD_MALYAN_M200_V2          4027  // STM32F070
 
 //
 // ARM Cortex-M4F
